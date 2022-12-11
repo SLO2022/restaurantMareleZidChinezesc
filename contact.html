@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>restaurantMareleZidChinezesc</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("images/bckgrimg.jpg");
+      min-height: 100%;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .width1000 {
+      max-width: 1400px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Links (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="index.html" class="w3-button w3-block w3-black">HOME</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="about.html" class="w3-button w3-block w3-black">ABOUT</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="meniu.html" class="w3-button w3-block w3-black">MENU</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="contact.html" class="w3-button w3-block w3-black">WHERE</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Contact/Area Container -->
+  <div class="w3-container" id="where" style="padding:50px 0px 32px 0px;">
+    <div class="w3-content width1000">
+      <h3 class="w3-center">CONTACT</h3>
+      <p class="w3-center w3-large" style="padding: 0px 0px 36px 0px">Lets get in touch. Send us a message:</p>
+      <div class="w3-half" style="padding: 30px 0px 0px 0px">
+        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Timișoara, Romania</p>
+        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +40 799 273 977</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right" style="padding: 0px 0px 45px 0px"> </i> Email: contact@softslo.com</p>
+        <p><a class="fa fa-paper-plane w3-button w3-theme w3-black" href="mailto:office@softslo.com" type="submit"> SEND MESSAGE</a></p>
+      </div>
+      <div class="w3-half">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d696.195862073438!2d21.23772979193067!3d45.735437499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47455d95ac2eecd3%3A0x35c2429b82c4ed1b!2sCalea%20Martirilor%201989%2025%2C%20Timi%C8%99oara!5e0!3m2!1sen!2sro!4v1670265420195!5m2!1sen!2sro"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64">
+    <div class="w3-xlarge w3-section">
+      <a class="fa fa-facebook-official w3-hover-opacity" href="https://www.facebook.com/profile.php?id=100088512782774" style="text-decoration: none;"></a>
+      <a class="fa fa-instagram w3-hover-opacity" href="https://www.instagram.com/softslo_/" style="text-decoration: none;"></a>
+    </div>
+    <p class="w3-center" style="padding: 30px 0 0 0">© Restaurant Marele Zid Chinezesc</p>
+    <p class="w3-center" style="padding: 30px 0 0 0">Strada Calea Martirilor 1989 Nr. 25</p>
+  </footer>
+  <script>
+
+    // Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+    }
+    document.getElementById("myLink").click();
+  </script>
+
+</body>
+
+</html>
